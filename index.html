@@ -11,6 +11,11 @@
          background-color: black;
          color: white;
          text-align: center;
+         transition: transform ;
+    }
+    input:hover {
+    transform: scale(1.05) rotate(1deg) translateY(50px)
+    background-color:
     }
     body {
          margin: 10px;
@@ -29,7 +34,8 @@
          background-color: white;
     }
     button:hover {
-         transform: scale(1.05) ;
+         transform: scale(1.05)
+         transform: translateX(100px)
     }
     @keyframes fadeIn {
          from { opacity: 0; }
@@ -48,6 +54,7 @@
      align-items: center;
      gap: 15px;
      border: solid black;
+     box-shadow: 0px 0px 15px 5px rgba(0, 255, 255, 0.6);
     }
       .input:hover {
       transform: scale(1.05);
@@ -57,25 +64,26 @@
 <body>
      <section>
        <div class="container">
-           <h3>password</h3>
-         <input type="password" id="password">
-       <h3>confirm password</h3>
-         <input type="password" id="confirmPassword">
+           <h3>User Name</h3>
+         <input type="Name" id="name">
+       <h3>password</h3>
+         <input type="password" id="Password">
            <button>confirm</button>
            <p id="message"></p>
            <script>const btn = document.querySelector("button");
          btn.addEventListener("click", function () {
-         const correctPassword = "lutfee";
-         const password = document.getElementById("password").value;
-         const confirmPassword = document.getElementById("confirmPassword").value;
+         const correctName = "Romdon";
+         const correctPassword = "2599";
+         const name = document.getElementById("name").value;
+         const password = document.getElementById("Password").value;
          const message = document.getElementById("message");
 
-         if (password !== confirmPassword) {
-         message.textContent = "wrong password";
+         if (name !== correctName) {
+         message.textContent = "wrong User name";
          message.style.color = "red";
          }
          else if (password !== correctPassword) {
-         message.textContent = "รหัสผ่านไม่ตรงกัน";
+         message.textContent = "wrong Password";
          message.style.color = "red";
          }
          else {
